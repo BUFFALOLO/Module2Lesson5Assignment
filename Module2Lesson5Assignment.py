@@ -8,20 +8,19 @@ Task 2: Use inputs to ask the user what operation they want to perform, and what
 
 Task 3: Ensure your code can handle division by zero and other potential errors. 
 So if you divide by 0, there is error handling set up to prevent an error from showing in the console.
+"""
 
-def addition():
+def addition(num1, num2):
     return num1 + num2
 
-def subtraction():
+def subtraction(num1, num2):
     return num1 - num2
 
-def multiplication():
+def multiplication(num1, num2):
     return num1 * num2
 
-def division():
-    if num1 == 0:
-        print("Cannot divide by 0")
-    elif num2 ==0:
+def division(num1, num2):
+    if num2 ==0:
         print("Cannot divide by 0")
     else:
         return num1 / num2
@@ -34,20 +33,19 @@ while True:
     num2 = int(input("Enter you second number: "))
 
     if math_type == "addition":
-        result = addition()
+        result = addition(num1, num2)
         print(f"{num1} + {num2} = {result}")
     elif math_type == "subtraction":
-        result = subtraction()
+        result = subtraction(num1, num2)
         print(f"{num1} - {num2} = {result}")
     elif math_type == "multiplication":
-        result = multiplication()
+        result = multiplication(num1, num2)
         print(f"{num1} * {num2} = {result}")
     elif math_type == "division":
-        result = division()
+        result = division(num1, num2)
         print(f"{num1} / {num2} = {result}")
     else:
         print("Please enter a correct math type")
-"""
 
 """
 2. The Shopping List Maker
@@ -90,8 +88,5 @@ def manage_shopping_list():
             print("Please enter a valid choice.")
 
 manage_shopping_list()
-
-
-
 
 
